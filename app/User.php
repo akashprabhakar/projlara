@@ -35,7 +35,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function timesheets()
     {
-        return $this->hasMany('App\Timesheet');
+        return $this->hasMany('App\Timesheet')->select(array('task_date', 'proj_name', 'task_desc','dev_initials','reference','hours','solution'));;
     }
 
     public function roles()

@@ -14,29 +14,19 @@
 
 Route::get('/', function () {
 
-//    App\User::find(3)->roles()->attach(1);
-//
-//    $user = App\User::find(2);
-//    return $user->roles;
-    return view('auth.login');
+  // App\User::find(3)->roles()->attach(1);
+
+  //   $user = App\User::find(3);
+  //  return $user;
+     return view('home');
 });
 
 
-// Route::get('timesheets',['middleware' => 'ways', function () {
-//
-// }]);
-//
-//Route::get('admin',['middleware' => 'ways', function () {
-//
-//}]);
 
-//Route::get('about', 'PagesController@about');
-//Route::get('contact', 'PagesController@contact');
-//
-//Route::get('timesheets', 'TimesheetsController@index');
-//Route::get('timesheets/create', 'TimesheetsController@create');
-//Route::get('timesheets/{id}', 'TimesheetsController@show');
-//Route::post('timesheets', 'TimesheetsController@store');
+Route::get('home',function () {
+    return view('home');
+
+});
 
 
 
@@ -52,5 +42,23 @@ Route::controllers([
         'passowrd' => 'Auth\PasswordController'
 ]);
 
+Route::get('generatecsv', 'TimesheetsController@generatecsv');
+// Route::get('timesheets', function () {
 
+//     \Auth::user()->roles()->attach(1);
 
+//     $user = App\User::find(5);
+//     return $user->roles;
+
+//     // return view('timesheets.index');
+     
+// });
+
+// Route::get('admin', function () {
+
+//     \Auth::user()->roles()->attach(1);
+
+//    // $user = App\User::find(5);
+//    // return $user->roles;
+     
+// });

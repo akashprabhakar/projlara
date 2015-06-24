@@ -7,6 +7,7 @@ use Illuminate\Http\Requests\Request    ;
 use App\Http\Requests\TimesheetRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Response;
 
 class TimesheetsController extends Controller
 {
@@ -26,7 +27,7 @@ class TimesheetsController extends Controller
     {
         
 
-    	$timesheets = \Auth::user()->timesheets()->latest()->get();
+    	$timesheets = \Auth::user()->timesheets()->latest()->paginate(7);
 
     	return view('timesheets.index', compact('timesheets'));
     }
@@ -92,6 +93,34 @@ class TimesheetsController extends Controller
 
         return redirect('timesheets');
 
+    }
+
+    public function generatecsv()
+    {
+        $headers = [
+                'Cache-Control'       => 'must-revalidate, post-check=0, pre-check=0'
+            ,   'Content-type'        => 'text/csv'
+            ,   'Content-Disposition' => 'attachment; filename=galleries.csv'
+            ,   'Expires'             => '0'
+            ,   'Pragma'              => 'public'
+        ];
+
+        $list = \Auth::user()->timesheets()->get()->toArray();
+
+        # add headers for each column in the CSV download
+        array_unshift($list, array_keys($list[0]));
+
+       $callback = function() use ($list) 
+        {
+            $FH = fopen('php://output', 'w');
+            foreach ($list as $row) { 
+                fputcsv($FH, $row);
+            }
+            fclose($FH);
+        };
+
+        return Response::stream($callback, 200, $headers);
+        // return $list;
     }
 }
 

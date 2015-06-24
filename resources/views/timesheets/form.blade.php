@@ -33,7 +33,7 @@
     </table>
     <p class="col-lg-12">
         {!! Form::submit($submitButtontext,['class' => 'col-md-4 btn btn-primary ']) !!}
-        <a href="{{ url('/timesheets') }}" class="col-md-4 btn btn-info pull-right">View Records</a>
+        <a href="{{ url('/timesheets') }}" class="col-md-4 btn btn-primary pull-right">View Records</a>
 
     </p>
 

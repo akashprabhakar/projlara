@@ -5,7 +5,7 @@
 	@include('timesheets.menu')
 
 	<div class="container">
-	    <div class="content">
+	    <div class="content2">
 
 
     <h1 class="page-header">Add a new record</h1>

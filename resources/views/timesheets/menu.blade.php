@@ -1,10 +1,12 @@
 <?php
-
+$loginname="Developer:";
+if(\Auth::user()->roles){
 if (\Auth::user()->roles->first()->name == 'Admin')
-    $loginname="Admin:";
-else
-    $loginname="Developer:";
+   $loginname="Admin:";
+   
+}
 
+// $loginname="Developer";
 
 
 ?>
@@ -24,7 +26,7 @@ else
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ route('timesheets.index') }}"><span class="glyphicon glyphicon-time">Timesheets</span></a></li>
+        <li><a href="{{ route('timesheets.index') }}">Timesheets</span></a></li>
         <li><a href="#">InOut</a></li>
         <li><a href="#">Profile</a></li>
         <li><a href="#">About</a></li>

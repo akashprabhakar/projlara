@@ -49,7 +49,7 @@
 	</table>
 	{!! Form::open(['method' => 'DELETE', 'route' => ['timesheets.destroy', $timesheet->id]]) !!}
 		<p>
-        <a class="col-md-4">{!! Form::submit('Delete Record',['class' => 'btn btn-danger form-control']) !!}</a>
+        <a class="">{!! Form::submit('Delete Record',['class' => 'col-md-4 btn btn-primary ']) !!}</a>
         <a href="{{ url('/timesheets') }}" class="col-md-4 btn btn-primary">View Records</a>
         
         </p>

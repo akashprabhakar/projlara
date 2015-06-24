@@ -4,6 +4,8 @@
 
 @include('admin.menu');
 <div class="container">
+    <div class="content1">
+    </div>
     <div class="content">
 
         <h1 class="page-header">All Users</h1>
@@ -17,7 +19,7 @@
 
 
 
-            <table class="table table-hover">
+            <table class="table table-bordered">
 
                 <tr class="space">
                     <th class="table-header">Username</th>
@@ -34,7 +36,7 @@
                     <td>{{ $user->email}}</td>
                     <td>{{ $user->roles->first()->name}}</td>
                     <td><a href="{{ url('/admin', $user->id) }}" class="btn btn-info" >View </a>
-                        <a href="{{ route('timesheets.edit', $user->id) }}" class="btn btn-primary" >Edit</a>
+                        <a href="{{ route('timesheets.edit', $user->id) }}" class="btn btn-info" >Edit</a>
 
                     </td>
                 </tr>

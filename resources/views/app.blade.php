@@ -15,97 +15,216 @@
                 
 
             body{
-                background-color: #000510;
+                background-color: #fff;
                 color:#414751;
             }
 
-            input[type="text"] {
-                background-color : #000510; 
-            }
-
-            input[type="date"] {
-                background-color: #000510;
-            }
-
-            textarea {
-                background-color: #000510;
+            h1{
+                letter-spacing: 1px;
+                font-size: 2em;
+                line-height: 1.6;
+                font-weight: 300;
             }
 
             .container {
-                background-color: #000510;
-                margin :0 auto;
+                background-color: #fff;
+                
                 text-align: center;
                 width:100%;
                 position: relative;
+                padding-right: 20px;
+
                 
             }
 
             .content {
                 text-align: center;
                 display: inline-block;
-                width: 1000px;
+                width: 85%;
+                float:right;
+                padding: 10px 10px 50px 10px;
+
             }
+
+            .content2 {
+                text-align: center;
+                display: inline-block;
+                width: 85%;
+                
+                padding: 10px 10px 50px 10px;
+
+            }
+
+
+           .content1{
+                width:13%;
+                float:left;
+                margin-top: 100px;
+                height: 100px;
+                margin-left: 10px;
+           }
 
             .title {
                 font-size: 96px;
                 margin-bottom: 40px;
             }
 
-            .page-header{
-                color:#f1103a;
-                border-color: #000510;
-            }
+
 
             .table-hover{
-                background-color: #000510;
+                background-color: #fff;
             }
 
             .table>tbody>tr:hover{
-                background-color: #000510;
+                background-color: #fff;
             }
 
             .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-                border-top: 1px solid #32313b;
-                color: #39b1c6;
+                border-top: 1px solid #fff;
+                color: #414751;
+
             }
 
             .table>tbody>tr>td, .table>tbody>tr>th{
-                color:#BEEAC4;
+                color:#000;
+                letter-spacing: 1px;
+                font-size: 0.9em;
+                line-height: 0.8;
+                font-weight: 300;
+                text-align: center;
             }
 
             .table .table-header{
-                color:#f1103a;
+                background: #f1103a;
+                color:#fff;
+                letter-spacing: 1px;
+                font-size: 0.9em;
+                line-height: 1;
+                font-weight: 300;
+                text-align: center;
             }
 
             .btn {
-                background-color: #000510;
-                border-color: #f1103a;
-                color:#BEEAC4;
+                background-color: #f1103a;
+                border-color:#f1103a;
+                color:#fff;
+                text-align: center;
+                letter-spacing: 1px;
+                font-size: 1em;
+                line-height: 1;
+                font-weight: 300;
             }
 
             .btn:hover{
                 background-color: #f1103a;
                 border-color: #f1103a;
-                color:#BEEAC4;
+                color:#fff;
 
             }
 
+
+
+            .btn-info{
+                letter-spacing: 1px;
+                font-size: 1em;
+                line-height: 1;
+                font-weight: 300;
+            }
+
+            .align-btn {
+
+                margin-left:30%;
+                }            
             .form-control{
-                background-color: #000510;
-                color: #f1103a;
+               
+                color: #414751;
+                height:50px;
+                margin-left:3%;
+                letter-spacing: 1px;
+                font-size: 1.2em;
+                line-height: 1.6;
+                font-weight: 300;
+                padding: 5px 5px 5px 5px;
+                
+            }
+            label{
+                text-align: left;
+            }
+
+            .form-control1{
+               
+                width:100%;
+                color: #fff;
+                height:50px;
+                margin-left:3%;
+                letter-spacing: 1px;
+                font-size: 1.2em;
+                line-height: 1.6;
+                font-weight: 300;
+                padding: 5px 5px 5px 5px;
+                
             }
 
             input:-webkit-autofill {
-                -webkit-box-shadow: 0 0 0px 1000px #000510 inset;
+                -webkit-box-shadow: 0 0 0px 1000px #fff inset;
                 -webkit-text-fill-color: #f1103a !important;
             }
 
             .login-name{
-                margin-left:70px;
-                margin-top:-15px;
-                font-size:24px;
+                margin-left:60px;
+                margin-top:-25px;
+                font-size:16px;
             }
-        </style
+
+            .color-input{
+                color:#414751;
+            }
+
+            .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+                    background: #f1103a;
+                    color:#fff;
+                    border-color: #f1103a;
+                }
+
+            .pagination>li>a, .pagination>li>span {
+                color:#f1103a;
+                 letter-spacing: 1px;
+                font-size: 1em;
+                line-height: 1;
+                font-weight: 300;
+            }
+
+            .btn-success{
+                margin-top: 20px;
+            }
+
+            .icon{
+                margin-top: 50px;
+                margin: 0 auto;
+                width:100%;
+                height:100px;
+                color:#414751;
+                letter-spacing: 1px;
+                font-size: 1em;
+                line-height: 1;
+                font-weight: 300;
+                text-decoration: none;
+            }
+
+            a.icon{
+                text-decoration: none;
+            }
+
+            .glyphicon-file, .glyphicon-edit{
+                font-size: 30px;
+                color:#414751;
+            }
+
+            .glyphicon-file:hover,.icon:hover, .glyphicon-edit:hover {
+                color:#f1103a;
+            }
+            
+        </style>
     </head>
     <body>
         

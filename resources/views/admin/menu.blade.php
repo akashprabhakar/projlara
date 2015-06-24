@@ -1,4 +1,16 @@
+<?php
 
+$loginname="Developer:";
+if(\Auth::user()->roles){
+if (\Auth::user()->roles->first()->name == 'Admin')
+   $loginname="Admin:";
+   
+}
+
+// $loginname="Developer";
+
+
+?>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,7 +21,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-hourglass glyph-size"></span><p class="login-name">Admin Dashboard</p></a>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-hourglass glyph-size"></span><p class="login-name">{{ $loginname }}{{  \Auth::user()->username}}</p></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
